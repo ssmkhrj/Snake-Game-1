@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  height: 30px;
+  width: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-one {
+  background: #a0ef28;
+}
+
+.color-two {
+  background: greenyellow;
+}
+
+.fa-leaf {
+  color: darkgreen;
+}
+
+.wall {
+  background: brown;
+}
+
+.snake {
+  background: dodgerblue;
+}
