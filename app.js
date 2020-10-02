@@ -183,12 +183,24 @@ function checkCollision(snakeHead, direction) {
   return undefined;
 }
 
-document.addEventListener("keydown", function (e) {
+document.addEventListener("keydown", reposition);
+
+let buttons = document.querySelectorAll(".btns button");
+
+buttons.forEach(function(button) {
+  button.addEventListener("click", function(e) {
+    const temp = {
+      code: button.id
+    };
+    reposition(temp);
+  });
+});
+
+function reposition(e) {
   if (
     !playGame &&
     !(e.code == "ArrowUp" || e.code == "ArrowRight" || e.code == "ArrowDown")
   ) {
-    console.log("here");
     return;
   }
 
@@ -232,4 +244,4 @@ document.addEventListener("keydown", function (e) {
     clearInterval(playGame);
     playGame = setInterval(gamePlay, 180);
   }
-});
+}
